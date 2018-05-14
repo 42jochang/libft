@@ -6,7 +6,7 @@
 /*   By: jochang <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/19 00:25:17 by jochang           #+#    #+#             */
-/*   Updated: 2018/04/24 12:15:36 by jochang          ###   ########.fr       */
+/*   Updated: 2018/05/14 15:52:32 by jochang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	char	*str;
+	unsigned char	*str;
 
-	str = (char*)s;
+	str = (unsigned char*)s;
 	while (n--)
 	{
 		if (*str == c)

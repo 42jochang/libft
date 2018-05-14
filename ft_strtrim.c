@@ -6,7 +6,7 @@
 /*   By: jochang <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/23 02:00:33 by jochang           #+#    #+#             */
-/*   Updated: 2018/04/26 07:56:00 by jochang          ###   ########.fr       */
+/*   Updated: 2018/05/14 15:59:55 by jochang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,6 @@ char	*ft_strtrim(char const *s)
 	len = ft_strlen(s);
 	while (ft_isspace(s[i]))
 		i++;
-	if (i == len)
-		return ("\0");
 	while (ft_isspace(s[len - 1]))
 		len--;
 	if (!(new = (char*)malloc(len - i + 1)))
