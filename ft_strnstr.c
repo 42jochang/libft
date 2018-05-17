@@ -6,7 +6,7 @@
 /*   By: jochang <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/19 01:12:49 by jochang           #+#    #+#             */
-/*   Updated: 2018/04/22 02:15:35 by jochang          ###   ########.fr       */
+/*   Updated: 2018/05/16 22:17:09 by jochang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 		while (to_find[k] == s[i + k] && i + k < len)
 			if (!to_find[k++])
 				return (&s[i]);
-		if (k != 0 && !to_find[k])
-			return (&s[i]);
+		//if (k != 0 && !to_find[k])
+		//	return (&s[i]);
 		i++;
 	}
 	return (NULL);
