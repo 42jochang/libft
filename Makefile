@@ -6,7 +6,7 @@
 #    By: jochang <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/19 01:31:43 by jochang           #+#    #+#              #
-#    Updated: 2018/05/17 19:08:19 by jochang          ###   ########.fr        #
+#    Updated: 2018/06/07 13:42:28 by jochang          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,7 +74,10 @@ SRC = ft_atoi.c \
 		ft_tolower.c \
 		ft_toupper.c \
 		ft_wordcount.c \
-		ft_wordlen.c
+		ft_wordlen.c \
+		ft_realloc.c \
+		ft_strccpy.c \
+		ft_getopt.c
 
 OBJ = $(SRC:%.c=%.o)
 

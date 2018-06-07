@@ -6,7 +6,7 @@
 /*   By: jochang <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/19 01:37:15 by jochang           #+#    #+#             */
-/*   Updated: 2018/04/24 12:02:34 by jochang          ###   ########.fr       */
+/*   Updated: 2018/06/07 13:42:14 by jochang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,9 @@ typedef struct		s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
+
+//For ft_getopt
+char				*g_optarg;
 
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *str, size_t n);
@@ -90,5 +93,9 @@ int					ft_placevalue(int n);
 int					ft_wordcount(char const *s, char const c);
 int					ft_wordlen(char const *s, char const c);
 char				*ft_strrev(char *str);
+void				*ft_realloc(void *ptr, size_t size);
+char				*ft_strccpy(char *dst, const char *src, char c);
+
+int					ft_getopt(int argc, char **argv, char *optstring);
 
 #endif

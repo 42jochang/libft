@@ -1,21 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_strccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jochang <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/19 01:27:31 by jochang           #+#    #+#             */
-/*   Updated: 2018/05/25 17:51:46 by jochang          ###   ########.fr       */
+/*   Created: 2018/05/30 21:42:54 by jochang           #+#    #+#             */
+/*   Updated: 2018/05/30 21:44:16 by jochang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr(int n)
+char	*ft_strccpy(char *dst, const char *src, char c)
 {
-	(n < 0 ? ft_putchar('-') : 1);
-	n *= (n > 0 ? -1 : 1);
-	(n <= -10 ? ft_putnbr(-(n / 10)) : 1);
-	ft_putchar('0' - n % 10);
+	int		i;
+
+	i = -1;
+	while (src[++i] && (src[i] != c))
+		dst[i] = src[i];
+	dst[i] = '\0';
+	return (dst);
 }
