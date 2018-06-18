@@ -6,7 +6,7 @@
 /*   By: jochang <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/04 13:34:54 by jochang           #+#    #+#             */
-/*   Updated: 2018/06/07 13:44:16 by jochang          ###   ########.fr       */
+/*   Updated: 2018/06/07 15:18:11 by jochang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,28 +15,28 @@
 int		ft_getopt(int argc, char **argv, char *optstring)
 {
 	static int	nextchar;
-	static int	optcount;
 	int			i;
 
-	if (nextchar >= argc - 1 || argv[nextchar][0] != '-')
+	g_optind += (ft_strequ(argv[g_optind], g_optarg) ? 1 : 0);
+	g_optarg = NULL;
+	if (g_optind >= argc || argv[g_optind][0] != '-')
 		return (-1);
 	i = -1;
-	optcount++;
+	nextchar++;
 	while (++i < (int)ft_strlen(optstring))
 	{
-		if (argv[nextchar][optcount] == optstring[i])
+		if (argv[g_optind][nextchar] == optstring[i])
 		{
-			if (!(argv[nextchar][optcount + 1]))
-			{
-				nextchar++;
-				optcount = 0;
-			}
 			g_optarg = (optstring[i + 1] == ':' ?
-					&argv[nextchar][0] : g_optarg);
-			nextchar = nextchar + (optstring[i + 1] == ':' ? 1 : 0);
+					&argv[g_optind + 1][0] : g_optarg);
+			if (!(argv[g_optind][nextchar + 1]))
+			{
+				g_optind++;
+				nextchar = 0;
+			}
 			return (optstring[i]);
 		}
 	}
-	nextchar++;
+	g_optopt = argv[g_optind][nextchar];
 	return ('?');
 }

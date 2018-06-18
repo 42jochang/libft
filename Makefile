@@ -6,7 +6,7 @@
 #    By: jochang <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/19 01:31:43 by jochang           #+#    #+#              #
-#    Updated: 2018/06/07 13:42:28 by jochang          ###   ########.fr        #
+#    Updated: 2018/06/17 17:36:29 by jochang          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -77,11 +77,18 @@ SRC = ft_atoi.c \
 		ft_wordlen.c \
 		ft_realloc.c \
 		ft_strccpy.c \
-		ft_getopt.c
+		ft_getopt.c \
+		ft_getstdin.c \
+		ft_swapendian.c \
+		ft_strupper.c \
+		ft_strlower.c \
+		get_next_line.c
 
 OBJ = $(SRC:%.c=%.o)
 
-INC = libft.h
+INC = libft.h \
+	  macro.h \
+	  get_next_line.h
 
 CFLAGS = -Wall -Wextra -Werror
 

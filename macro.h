@@ -1,24 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strccpy.c                                       :+:      :+:    :+:   */
+/*   macro.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jochang <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/30 21:42:54 by jochang           #+#    #+#             */
-/*   Updated: 2018/06/17 17:10:34 by jochang          ###   ########.fr       */
+/*   Created: 2018/06/17 17:11:16 by jochang           #+#    #+#             */
+/*   Updated: 2018/06/17 17:24:52 by jochang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef MACRO_H
+# define MACRO_H
 
-char	*ft_strccpy(char *dst, const char *src, char c)
-{
-	int		i;
+# define BUFF_SIZE 42
+# define ERROR_CHECK(x) if (x) return (-1)
+# define BREAK_CHECK(x) if (x) break
 
-	i = -1;
-	while (src[++i] && (src[i] != c))
-		dst[i] = src[i];
-	dst[i] = '\0';
-	return (dst);
-}
+#endif

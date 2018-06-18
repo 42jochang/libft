@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strccpy.c                                       :+:      :+:    :+:   */
+/*   ft_strupper.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jochang <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/30 21:42:54 by jochang           #+#    #+#             */
-/*   Updated: 2018/06/17 17:10:34 by jochang          ###   ########.fr       */
+/*   Created: 2018/06/17 17:32:34 by jochang           #+#    #+#             */
+/*   Updated: 2018/06/17 17:34:17 by jochang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strccpy(char *dst, const char *src, char c)
+char	*ft_strupper(const char *src)
 {
 	int		i;
+	char	*str;
 
+	str = ft_strdup(src);
 	i = -1;
-	while (src[++i] && (src[i] != c))
-		dst[i] = src[i];
-	dst[i] = '\0';
-	return (dst);
+	while (str[++i])
+		str[i] = ft_toupper(str[i]);
+	return (str);
 }

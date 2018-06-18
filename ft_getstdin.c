@@ -1,24 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strccpy.c                                       :+:      :+:    :+:   */
+/*   ft_getstdin.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jochang <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/30 21:42:54 by jochang           #+#    #+#             */
-/*   Updated: 2018/06/17 17:10:34 by jochang          ###   ########.fr       */
+/*   Created: 2018/06/14 16:15:25 by jochang           #+#    #+#             */
+/*   Updated: 2018/06/17 17:22:14 by jochang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strccpy(char *dst, const char *src, char c)
+char	*ft_getstdin(void)
 {
-	int		i;
-
-	i = -1;
-	while (src[++i] && (src[i] != c))
-		dst[i] = src[i];
-	dst[i] = '\0';
-	return (dst);
+	int ret;
+	char *buf;
+	char *str;
+	char *tmp;
+	
+	str = (char*)ft_memalloc(0);
+	buf = (char*)ft_memalloc(65);
+	while ((ret = read(0, buf, BUFF_SIZE)))
+	{
+		buf[ret] = '\0';
+		tmp = ft_strjoin(str, buf);
+		free(str);
+		str = tmp;
+	}
+	free(buf);
+	return (str);
 }

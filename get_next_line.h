@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strccpy.c                                       :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jochang <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/30 21:42:54 by jochang           #+#    #+#             */
-/*   Updated: 2018/06/17 17:10:34 by jochang          ###   ########.fr       */
+/*   Created: 2018/05/25 17:56:34 by jochang           #+#    #+#             */
+/*   Updated: 2018/06/17 17:25:03 by jochang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
-char	*ft_strccpy(char *dst, const char *src, char c)
-{
-	int		i;
+# include <stdio.h>
+# include <sys/types.h>
+# include <sys/stat.h>
+# include <fcntl.h>
 
-	i = -1;
-	while (src[++i] && (src[i] != c))
-		dst[i] = src[i];
-	dst[i] = '\0';
-	return (dst);
-}
+int		get_next_line(const int fd, char **line);
+
+#endif

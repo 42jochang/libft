@@ -6,7 +6,7 @@
 /*   By: jochang <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/19 01:37:15 by jochang           #+#    #+#             */
-/*   Updated: 2018/06/07 13:42:14 by jochang          ###   ########.fr       */
+/*   Updated: 2018/06/17 17:36:45 by jochang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
+
+# include "macro.h"
 
 typedef struct		s_list
 {
@@ -25,6 +27,8 @@ typedef struct		s_list
 
 //For ft_getopt
 char				*g_optarg;
+int					g_optind;
+int					g_optopt;
 
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *str, size_t n);
@@ -97,5 +101,9 @@ void				*ft_realloc(void *ptr, size_t size);
 char				*ft_strccpy(char *dst, const char *src, char c);
 
 int					ft_getopt(int argc, char **argv, char *optstring);
+char				*ft_getstdin(void);
+unsigned int		ft_swapendian(unsigned int i);
+char				*ft_strupper(const char *src);
+char				*ft_strlower(const char *src);
 
 #endif
