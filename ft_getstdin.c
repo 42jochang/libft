@@ -6,7 +6,7 @@
 /*   By: jochang <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/14 16:15:25 by jochang           #+#    #+#             */
-/*   Updated: 2018/06/17 17:22:14 by jochang          ###   ########.fr       */
+/*   Updated: 2018/06/17 17:54:25 by jochang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 char	*ft_getstdin(void)
 {
-	int ret;
-	char *buf;
-	char *str;
-	char *tmp;
-	
+	int		ret;
+	char	*buf;
+	char	*str;
+	char	*tmp;
+
 	str = (char*)ft_memalloc(0);
 	buf = (char*)ft_memalloc(65);
 	while ((ret = read(0, buf, BUFF_SIZE)))

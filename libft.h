@@ -6,7 +6,7 @@
 /*   By: jochang <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/19 01:37:15 by jochang           #+#    #+#             */
-/*   Updated: 2018/06/17 17:36:45 by jochang          ###   ########.fr       */
+/*   Updated: 2018/06/17 17:53:14 by jochang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,9 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
-//For ft_getopt
+/*
+** For ft_getopt
+*/
 char				*g_optarg;
 int					g_optind;
 int					g_optopt;
