@@ -20,8 +20,7 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	i = -1;
 	if (s && f)
 	{
-		if (!(new = (char*)malloc(ft_strlen(s) + 1)))
-			return (NULL);
+		NULL_CHECK(!(new = (char*)malloc(ft_strlen(s) + 1)));
 		while (s[++i])
 			new[i] = f(s[i]);
 		new[i] = '\0';

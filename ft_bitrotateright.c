@@ -1,30 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_bitrotateright.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jochang <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/23 01:30:15 by jochang           #+#    #+#             */
-/*   Updated: 2018/04/26 07:40:06 by jochang          ###   ########.fr       */
+/*   Created: 2018/06/20 15:50:12 by jochang           #+#    #+#             */
+/*   Updated: 2018/06/20 19:15:50 by jochang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+unsigned int	ft_bitrotateright(unsigned int x, unsigned int c)
 {
-	char	*new;
-	int		i;
-
-	i = -1;
-	if (s && f)
-	{
-		NULL_CHECK(!(new = (char*)malloc(ft_strlen(s) + 1)));
-		while (s[++i])
-			new[i] = f(i, s[i]);
-		new[i] = '\0';
-		return (new);
-	}
-	return (NULL);
+	return (BIT_RR32(x, c));
 }

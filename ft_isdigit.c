@@ -6,11 +6,13 @@
 /*   By: jochang <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/17 23:44:32 by jochang           #+#    #+#             */
-/*   Updated: 2018/04/26 07:00:42 by jochang          ###   ########.fr       */
+/*   Updated: 2018/07/01 07:03:33 by jochang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_isdigit(int c)
 {
-	return ((c >= '0' && c <= '9') ? 1 : 0);
+	return (IS_DIGIT(c));
 }

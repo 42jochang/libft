@@ -14,5 +14,5 @@
 
 void	ft_putstr_fd(char const *s, int fd)
 {
-	(s ? write(fd, s, ft_strlen(s)) : 1);
+	IF_EXISTS(s, write(fd, s, ft_strlen(s)));
 }

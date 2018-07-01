@@ -17,9 +17,9 @@ char	*ft_strupper(const char *src)
 	int		i;
 	char	*str;
 
-	str = ft_strdup(src);
 	i = -1;
+	str = ft_strdup(src);
 	while (str[++i])
-		str[i] = ft_toupper(str[i]);
+		str[i] = TO_UPPER(str[i]);
 	return (str);
 }

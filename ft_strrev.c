@@ -16,17 +16,14 @@ char	*ft_strrev(char *str)
 {
 	int		i;
 	int		k;
-	char	temp;
 
-	i = 0;
-	k = ft_strlen(str) - 1;
-	while (i < k)
+	i = -1;
+	k = ft_strlen(str);
+	while (++i < --k)
 	{
-		temp = str[i];
-		str[i] = str[k];
-		str[k] = temp;
-		i++;
-		k++;
+		str[i] ^= str[k];
+		str[k] ^= str[i];
+		str[i] ^= str[k];
 	}
 	return (str);
 }

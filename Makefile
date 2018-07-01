@@ -6,7 +6,7 @@
 #    By: jochang <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/19 01:31:43 by jochang           #+#    #+#              #
-#    Updated: 2018/06/17 17:36:29 by jochang          ###   ########.fr        #
+#    Updated: 2018/06/20 16:01:25 by jochang          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -80,9 +80,12 @@ SRC = ft_atoi.c \
 		ft_getopt.c \
 		ft_getstdin.c \
 		ft_swapendian.c \
+		ft_swapnendian.c \
 		ft_strupper.c \
 		ft_strlower.c \
-		get_next_line.c
+		get_next_line.c \
+		ft_bitrotateright.c \
+		ft_bitrotateleft.c
 
 OBJ = $(SRC:%.c=%.o)
 

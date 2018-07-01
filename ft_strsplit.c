@@ -20,16 +20,14 @@ char	**ft_strsplit(char const *s, char c)
 	int		wlen;
 
 	numwords = ft_wordcount(s, c);
-	if (!(arr = (char**)malloc((numwords + 1) * sizeof(char*))))
-		return (NULL);
+	NULL_CHECK(!(arr = (char**)ft_memalloc((numwords + 1))));
 	i = 0;
 	while (numwords--)
 	{
 		while (*s == c && *s)
 			s++;
 		wlen = ft_wordlen(s, c);
-		if (!(arr[i] = ft_strsub(s, 0, wlen)))
-			return (NULL);
+		NULL_CHECK(!(arr[i] = ft_strsub(s, 0, wlen)));
 		s += wlen;
 		i++;
 	}

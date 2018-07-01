@@ -6,11 +6,13 @@
 /*   By: jochang <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/18 00:36:02 by jochang           #+#    #+#             */
-/*   Updated: 2018/04/26 07:00:17 by jochang          ###   ########.fr       */
+/*   Updated: 2018/07/01 07:11:43 by jochang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_isascii(int c)
 {
-	return ((c >= 0 && c <= 127) ? 1 : 0);
+	return (IS_ASCII(c));
 }

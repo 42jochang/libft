@@ -22,10 +22,8 @@ char	*ft_itoa(int n)
 	sign = (n >= 0 ? 1 : -1);
 	len = ft_placevalue(n) + (sign >= 0 ? 0 : 1);
 	str = (char*)ft_strnew(len + 1);
-	if (!str)
-		return (NULL);
-	if (n == 0)
-		str[0] = '0';
+	NULL_CHECK(!str);
+	IF_TRUE(n == 0, str[0] = '0');
 	len--;
 	while (n)
 	{
@@ -33,7 +31,6 @@ char	*ft_itoa(int n)
 		n /= 10;
 		len--;
 	}
-	if (sign == -1)
-		str[len] = '-';
+	IF_TRUE(sign == -1, str[len] = '-');
 	return (str);
 }

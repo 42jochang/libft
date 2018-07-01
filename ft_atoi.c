@@ -25,10 +25,10 @@ int	ft_atoi(const char *str)
 		i++;
 	if (str[i] == '+' || str[i] == '-')
 	{
-		s = (str[i] == '-' ? -1 : 1);
+		IF_TRUE(str[i] == '-', s = -1);
 		i++;
 	}
-	while (ft_isdigit(str[i]))
+	while (IS_DIGIT(str[i]))
 	{
 		n = n * 10 + str[i] - '0';
 		i++;

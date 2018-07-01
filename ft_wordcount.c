@@ -18,16 +18,11 @@ int		ft_wordcount(char const *s, char const c)
 	int		i;
 
 	count = 0;
-	i = 0;
-	if (!s)
-		return (0);
+	i = -1;
+	ZERO_CHECK(!s);
 	if (c < 32)
 		return (1);
-	while (s[i])
-	{
-		if (s[i] != c && (i == 0 || s[i - 1] == c))
-			count++;
-		i++;
-	}
+	while (s[++i])
+		IF_TRUE(s[i] != c && (i == 0 || s[i - 1] == c), count++);
 	return (count);
 }

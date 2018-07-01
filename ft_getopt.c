@@ -12,29 +12,27 @@
 
 #include "libft.h"
 
-int		ft_getopt(int argc, char **argv, char *optstring)
+int		ft_getopt(int argc, char **argv, char *optstr)
 {
 	static int	nextchar;
 	int			i;
 
 	g_optind += (ft_strequ(argv[g_optind], g_optarg) ? 1 : 0);
 	g_optarg = NULL;
-	if (g_optind >= argc || argv[g_optind][0] != '-')
-		return (-1);
+	ERROR_CHECK(g_optind >= argc || argv[g_optind][0] != '-');
 	i = -1;
 	nextchar++;
-	while (++i < (int)ft_strlen(optstring))
+	while (++i < (int)ft_strlen(optstr))
 	{
-		if (argv[g_optind][nextchar] == optstring[i])
+		if (argv[g_optind][nextchar] == optstr[i])
 		{
-			g_optarg = (optstring[i + 1] == ':' ?
-					&argv[g_optind + 1][0] : g_optarg);
+			IF_TRUE(optstr[i + 1] == ':', g_optarg = &argv[g_optind + 1][0]);
 			if (!(argv[g_optind][nextchar + 1]))
 			{
 				g_optind++;
 				nextchar = 0;
 			}
-			return (optstring[i]);
+			return (optstr[i]);
 		}
 	}
 	g_optopt = argv[g_optind][nextchar];

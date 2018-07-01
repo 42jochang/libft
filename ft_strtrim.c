@@ -19,16 +19,14 @@ char	*ft_strtrim(char const *s)
 	int		len;
 	int		j;
 
-	if (!s)
-		return (NULL);
+	NULL_CHECK(!s);
 	i = 0;
 	len = ft_strlen(s);
 	while (ft_isspace(s[i]))
 		i++;
 	while (ft_isspace(s[len - 1]))
 		len--;
-	if (!(new = (char*)malloc(len - i >= 0 ? len - i + 1 : 1)))
-		return (NULL);
+	NULL_CHECK(!(new = (char*)ft_memalloc(len - i >= 0 ? len - i + 1 : 1)));
 	j = -1;
 	while (++j < len - i)
 		new[j] = s[i + j];

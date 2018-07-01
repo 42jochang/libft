@@ -6,7 +6,7 @@
 /*   By: jochang <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/18 00:50:56 by jochang           #+#    #+#             */
-/*   Updated: 2018/04/20 00:09:04 by jochang          ###   ########.fr       */
+/*   Updated: 2018/07/01 07:08:58 by jochang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,5 @@
 
 int	ft_isalnum(int c)
 {
-	if (ft_isalpha(c) || ft_isdigit(c))
-		return (1);
-	return (0);
+	return (IS_ALNUM(c));
 }

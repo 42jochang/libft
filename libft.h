@@ -6,7 +6,7 @@
 /*   By: jochang <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/19 01:37:15 by jochang           #+#    #+#             */
-/*   Updated: 2018/06/17 17:53:14 by jochang          ###   ########.fr       */
+/*   Updated: 2018/07/01 07:00:59 by jochang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,7 +105,11 @@ char				*ft_strccpy(char *dst, const char *src, char c);
 int					ft_getopt(int argc, char **argv, char *optstring);
 char				*ft_getstdin(void);
 unsigned int		ft_swapendian(unsigned int i);
+unsigned int		*ft_swapnendian(unsigned int *arr, int n);
 char				*ft_strupper(const char *src);
 char				*ft_strlower(const char *src);
+
+unsigned int		ft_bitrotateright(unsigned int x, unsigned int c);
+unsigned int		ft_bitrotateleft(unsigned int x, unsigned int c);
 
 #endif

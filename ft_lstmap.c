@@ -17,8 +17,7 @@ t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 	t_list	*new;
 	t_list	*begin_list;
 
-	if (!lst)
-		return (NULL);
+	NULL_CHECK(!lst);
 	new = f(lst);
 	lst = lst->next;
 	begin_list = new;

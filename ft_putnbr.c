@@ -14,8 +14,8 @@
 
 void	ft_putnbr(int n)
 {
-	(n < 0 ? ft_putchar('-') : 1);
+	IF_TRUE(n < 0, ft_putchar('-'));
 	n *= (n > 0 ? -1 : 1);
-	(n <= -10 ? ft_putnbr(-(n / 10)) : 1);
+	IF_TRUE(n <= -10, ft_putnbr(-(n / 10)));
 	ft_putchar('0' - n % 10);
 }

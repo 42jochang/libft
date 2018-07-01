@@ -1,30 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_swapnendian.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jochang <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/23 01:30:15 by jochang           #+#    #+#             */
-/*   Updated: 2018/04/26 07:40:06 by jochang          ###   ########.fr       */
+/*   Created: 2018/06/20 01:28:04 by jochang           #+#    #+#             */
+/*   Updated: 2018/06/20 01:30:03 by jochang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+unsigned int	*ft_swapnendian(unsigned int *arr, int n)
 {
-	char	*new;
 	int		i;
 
 	i = -1;
-	if (s && f)
-	{
-		NULL_CHECK(!(new = (char*)malloc(ft_strlen(s) + 1)));
-		while (s[++i])
-			new[i] = f(i, s[i]);
-		new[i] = '\0';
-		return (new);
-	}
-	return (NULL);
+	while (++i < n)
+		arr[i] = ft_swapendian(arr[i]);
+	return (arr);
 }

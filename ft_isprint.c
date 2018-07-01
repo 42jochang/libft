@@ -6,11 +6,13 @@
 /*   By: jochang <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/18 00:38:09 by jochang           #+#    #+#             */
-/*   Updated: 2018/04/26 07:01:24 by jochang          ###   ########.fr       */
+/*   Updated: 2018/07/01 07:12:42 by jochang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_isprint(int c)
 {
-	return ((c >= 32 && c <= 126) ? 1 : 0);
+	return (IS_PRINT(c));
 }
