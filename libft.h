@@ -6,7 +6,7 @@
 /*   By: jochang <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/19 01:37:15 by jochang           #+#    #+#             */
-/*   Updated: 2018/07/01 07:00:59 by jochang          ###   ########.fr       */
+/*   Updated: 2018/07/01 09:17:11 by jochang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,5 +111,8 @@ char				*ft_strlower(const char *src);
 
 unsigned int		ft_bitrotateright(unsigned int x, unsigned int c);
 unsigned int		ft_bitrotateleft(unsigned int x, unsigned int c);
+
+void				ft_printmemory(const void *addr, size_t size,
+									int split, int nl);
 
 #endif

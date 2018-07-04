@@ -1,36 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*   ft_printmemory.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jochang <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/24 02:22:30 by jochang           #+#    #+#             */
-/*   Updated: 2018/07/04 07:56:40 by jochang          ###   ########.fr       */
+/*   Created: 2018/07/01 09:10:06 by jochang           #+#    #+#             */
+/*   Updated: 2018/07/04 07:43:28 by jochang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_strsplit(char const *s, char c)
+void	ft_printmemory(const void *addr, size_t size, int split, int nl)
 {
-	char	**arr;
-	int		i;
-	int		numwords;
-	int		wlen;
+	char	*hex;
+	char	*x;
+	size_t	i;
 
-	numwords = ft_wordcount(s, c);
-	NULL_CHECK(!(arr = (char**)ft_memalloc((numwords + 1) * sizeof(char*))));
-	i = 0;
-	while (numwords--)
+	hex = "0123456789abcdef";
+	i = -1;
+	x = (char*)addr;
+	while (++i < size)
 	{
-		while (*s == c && *s)
-			s++;
-		wlen = ft_wordlen(s, c);
-		NULL_CHECK(!(arr[i] = ft_strsub(s, 0, wlen)));
-		s += wlen;
-		i++;
+		ft_putchar(hex[(x[i] & 0xF0 >> 4)]);
+		ft_putchar(hex[x[i] & 0x0F]);
+		IF_TRUE(split, ft_putchar(' '));
+		IF_TRUE(nl && !((i + 1) % nl), ft_putchar('\n'));
 	}
-	arr[i] = NULL;
-	return (arr);
 }
