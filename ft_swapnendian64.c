@@ -6,11 +6,11 @@
 /*   By: jochang <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/04 10:48:53 by jochang           #+#    #+#             */
-/*   Updated: 2018/07/04 10:48:55 by jochang          ###   ########.fr       */
+/*   Updated: 2018/08/08 14:40:02 by jochang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_ssl.h"
+#include "libft.h"
 
 uint64_t	*ft_swapnendian64(uint64_t *arr, int32_t n)
 {

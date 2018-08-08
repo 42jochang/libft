@@ -6,11 +6,11 @@
 /*   By: jochang <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/29 10:01:10 by jochang           #+#    #+#             */
-/*   Updated: 2018/06/30 21:15:52 by jochang          ###   ########.fr       */
+/*   Updated: 2018/08/08 14:39:31 by jochang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_ssl.h"
+#include "libft.h"
 
 int		ft_getnstdin(int n, char **string)
 {
