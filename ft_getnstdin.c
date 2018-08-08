@@ -1,18 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bitrotateright.c                                :+:      :+:    :+:   */
+/*   ft_getnstdin.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jochang <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/20 15:50:12 by jochang           #+#    #+#             */
-/*   Updated: 2018/06/20 19:15:50 by jochang          ###   ########.fr       */
+/*   Created: 2018/06/29 10:01:10 by jochang           #+#    #+#             */
+/*   Updated: 2018/06/30 21:15:52 by jochang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_ssl.h"
 
-unsigned int	ft_bitrotateright(unsigned int x, unsigned int c)
+int		ft_getnstdin(int n, char **string)
 {
-	return (BIT_RR32(x, c));
+	char	buf[n];
+	char	*ptr;
+	int		len;
+
+	len = 0;
+	ptr = &buf[0];
+	while (read(0, ptr, 1) > 0)
+	{
+		len++;
+		ptr++;
+		BREAK_CHECK(len >= n);
+	}
+	ft_memcpy(*string, buf, len);
+	return (len);
 }

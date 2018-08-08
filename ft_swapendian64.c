@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bitrotateleft.c                                 :+:      :+:    :+:   */
+/*   ft_swapendian64.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jochang <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/20 15:57:46 by jochang           #+#    #+#             */
-/*   Updated: 2018/06/20 19:15:36 by jochang          ###   ########.fr       */
+/*   Created: 2018/07/04 10:44:06 by jochang           #+#    #+#             */
+/*   Updated: 2018/07/04 10:46:43 by jochang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_ssl.h"
 
-unsigned int	ft_bitrotateleft(unsigned int x, unsigned int c)
+uint64_t	ft_swapendian64(uint64_t i)
 {
-	return (BIT_RL32(x, c));
+	i = (i & 0x00000000FFFFFFFF) << 32 | (i & 0xFFFFFFFF00000000) >> 32;
+	i = (i & 0x0000FFFF0000FFFF) << 16 | (i & 0xFFFF0000FFFF0000) >> 16;
+	i = (i & 0x00FF00FF00FF00FF) << 8 | (i & 0xFF00FF00FF00FF00) >> 8;
+	return (i);
 }
