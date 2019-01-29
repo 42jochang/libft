@@ -14,12 +14,12 @@
 
 int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned char	*str1;
-	unsigned char	*str2;
+	uint8_t	*str1;
+	uint8_t	*str2;
 
 	ZERO_CHECK(n <= 0 || s1 == s2);
-	str1 = (unsigned char*)s1;
-	str2 = (unsigned char*)s2;
+	str1 = (uint8_t*)s1;
+	str2 = (uint8_t*)s2;
 	while (n--)
 	{
 		if (*str1 != *str2)

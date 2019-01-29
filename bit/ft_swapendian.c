@@ -10,7 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_swapendian(unsigned int i)
+#include "../inc/libft.h"
+
+uint32_t	ft_swapendian(uint32_t i)
 {
 	return (((i >> 24) & 0xFF) | ((i >> 8) & 0xFF00) |
 			((i << 8) & 0xFF0000) | ((i << 24) & 0xFF000000));

@@ -16,21 +16,18 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 {
 	size_t	i;
 	size_t	k;
-	char	*s;
 
-	i = 0;
-	s = (char*)str;
 	if (!to_find[0])
-		return (s);
-	while (str[i])
+		return ((char*)str);
+	i = -1;
+	while (str[++i])
 	{
 		k = 0;
-		while (to_find[k] == s[i + k] && i + k < len)
+		while (to_find[k] == str[i + k] && i + k < len)
 			if (!to_find[k++])
-				return (&s[i]);
+				return ((char*)&str[i]);
 		if (k != 0 && !to_find[k])
-			return (&s[i]);
-		i++;
+			return ((char*)&str[i]);
 	}
 	return (NULL);
 }

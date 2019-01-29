@@ -10,11 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../inc/libft.h"
+
 char	*ft_strcat(char *s1, const char *s2)
 {
-	int i;
-	int k;
+	size_t	i;
+	size_t	k;
 
+	NULL_CHECK(!s1 || !s2);
 	i = 0;
 	k = 0;
 	while (s1[i])

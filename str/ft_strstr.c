@@ -14,8 +14,8 @@
 
 char	*ft_strstr(const char *str, const char *to_find)
 {
-	int i;
-	int k;
+	size_t	i;
+	size_t	k;
 
 	i = 0;
 	if (!*to_find)

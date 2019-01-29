@@ -19,8 +19,8 @@ char	*ft_getstdin(void)
 	char	*str;
 	char	*tmp;
 
-	str = (char*)ft_memalloc(0);
-	buf = (char*)ft_memalloc(65);
+	NULL_CHECK(!(str = (char*)ft_memalloc(0)));
+	NULL_CHECK(!(buf = (char*)ft_memalloc(65)));
 	while ((ret = read(0, buf, BUFF_SIZE)) > 0)
 	{
 		buf[ret] = '\0';

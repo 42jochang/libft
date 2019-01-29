@@ -16,8 +16,6 @@ char	*ft_strndup(const char *src, size_t len)
 {
 	char	*str;
 
-	NULL_CHECK(!(str = (char*)malloc(len + 1)));
-	str = ft_strncpy(str, src, len);
-	str[len] = '\0';
-	return (str);
+	NULL_CHECK(!(str = (char*)ft_memalloc(len + 1)));
+	return (ft_strncpy(str, src, len));
 }

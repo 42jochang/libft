@@ -14,9 +14,5 @@
 
 char	*ft_strnew(size_t size)
 {
-	char	*temp;
-
-	NULL_CHECK(!(temp = (char*)malloc(size + 1)));
-	temp = ft_memset(temp, '\0', size + 1);
-	return (temp);
+	return ((char*)ft_memalloc(size + 1));
 }

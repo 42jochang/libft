@@ -14,13 +14,13 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	unsigned char	*s1;
-	unsigned char	*s2;
+	uint8_t	*s1;
+	uint8_t	*s2;
 
 	if (n <= 0 || dst == src)
 		return (dst);
-	s1 = (unsigned char*)dst;
-	s2 = (unsigned char*)src;
+	s1 = (uint8_t*)dst;
+	s2 = (uint8_t*)src;
 	while (--n)
 		*s1++ = *s2++;
 	*s1 = *s2;

@@ -12,7 +12,7 @@
 
 #include "../inc/libft.h"
 
-unsigned int	*ft_swapnendian(unsigned int *arr, int n)
+uint32_t	*ft_swapnendian(uint32_t *arr, int n)
 {
 	int		i;
 

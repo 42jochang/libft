@@ -10,10 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../inc/libft.h"
+
 char	*ft_strccpy(char *dst, const char *src, char c)
 {
 	int		i;
 
+	NULL_CHECK(!dst || !src);
 	i = -1;
 	while (src[++i] && (src[i] != c))
 		dst[i] = src[i];
