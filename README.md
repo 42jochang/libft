@@ -1,6 +1,6 @@
 # -42- Libft
 
-The first project in the 42 Cadet curriculum. We learn to create our own library to use for future projects. Because we are limited in function calls we are allowed to use from standard libraries, we must make our own for our future projects. This library is revisited and expanded upon as we go through the rest of the curriculum, needing more functions. Creating additions to the libaray makes for more modular code, as opposed to making specialized functions for each of the future projects.
+The first project in the 42 Cadet curriculum. We learn to create our own library to use for future projects. Because we are limited in function calls we are allowed to use from standard libraries, we must make our own for our future projects. This library is revisited and expanded upon as we go through the rest of the curriculum, needing more functions. Creating additions to the library makes for more modular code, as opposed to making specialized functions for each of the future projects.
 
 ## Final Score
 
