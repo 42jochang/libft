@@ -10,13 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	uint8_t	*str;
 
-	str = (uint8_t)s;
+	str = (uint8_t*)s;
 	while (n--)
 	{
 		if (*str == (uint8_t)c)

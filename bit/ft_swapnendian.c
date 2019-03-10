@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "libft.h"
 
 uint32_t	*ft_swapnendian(uint32_t *arr, int n)
 {

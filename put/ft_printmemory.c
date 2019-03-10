@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "libft.h"
 
 void	ft_printmemory(const void *addr, size_t size, int split, int nl)
 {

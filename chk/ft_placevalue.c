@@ -14,7 +14,7 @@ int		ft_placevalue(int n)
 {
 	int count;
 
-	count = !n ? 1 : 0;
+	count = n ? 0 : 1;
 	while (n)
 	{
 		n /= 10;
