@@ -1,22 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_placevalue.c                                    :+:      :+:    :+:   */
+/*   pt_upval.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jochang <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/23 23:20:03 by jochang           #+#    #+#             */
-/*   Updated: 2018/04/26 01:13:05 by jochang          ###   ########.fr       */
+/*   Updated: 2018/08/20 13:18:20 by jochang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-int		ft_placevalue(int64_t n)
+int		pt_upval(uint64_t n)
 {
 	int count;
 
-	count = n ? 0 : 1;
+	count = 0;
+	if (!n)
+		return (1);
 	while (n)
 	{
 		n /= 10;

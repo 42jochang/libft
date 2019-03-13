@@ -1,26 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_placevalue.c                                    :+:      :+:    :+:   */
+/*   dispatch.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jochang <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/23 23:20:03 by jochang           #+#    #+#             */
-/*   Updated: 2018/04/26 01:13:05 by jochang          ###   ########.fr       */
+/*   Created: 2018/08/10 19:51:47 by jochang           #+#    #+#             */
+/*   Updated: 2018/08/22 19:27:31 by jochang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/ft_printf.h"
 
-int		ft_placevalue(int64_t n)
-{
-	int count;
-
-	count = n ? 0 : 1;
-	while (n)
-	{
-		n /= 10;
-		count++;
-	}
-	return (count);
-}
+const t_dispatch	g_select[] = {
+	{'s', &d_s},
+	{'S', &d_us},
+	{'p', &d_p},
+	{'d', &d_d},
+	{'D', &d_ud},
+	{'i', &d_d},
+	{'o', &d_o},
+	{'O', &d_uo},
+	{'u', &d_u},
+	{'U', &d_uu},
+	{'x', &d_x},
+	{'X', &d_ux},
+	{'c', &d_c},
+	{'C', &d_uc},
+	{'%', &d_percent},
+	{'b', &d_b}
+};

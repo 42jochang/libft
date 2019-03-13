@@ -19,6 +19,7 @@
 # include <stdint.h>
 
 # include "get_next_line.h"
+# include "ft_printf.h"
 # include "macro.h"
 
 typedef struct		s_list
@@ -54,7 +55,7 @@ int					ft_isascii(int c);
 int					ft_isdigit(int c);
 int					ft_isprint(int c);
 int					ft_isspace(char c);
-int					ft_placevalue(int n);
+int					ft_placevalue(int64_t n);
 int					ft_wordcount(char const *s, char const c);
 int					ft_wordlen(char const *s, char const c);
 
@@ -63,7 +64,7 @@ int					ft_wordlen(char const *s, char const c);
 */
 
 int					ft_atoi(const char *str);
-char				*ft_itoa(int n);
+char				*ft_itoa(int64_t n);
 
 /*
 ** GET

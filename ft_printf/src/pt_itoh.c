@@ -1,26 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_placevalue.c                                    :+:      :+:    :+:   */
+/*   pt_itoh.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jochang <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/23 23:20:03 by jochang           #+#    #+#             */
-/*   Updated: 2018/04/26 01:13:05 by jochang          ###   ########.fr       */
+/*   Created: 2018/08/16 15:05:25 by jochang           #+#    #+#             */
+/*   Updated: 2018/08/22 16:29:05 by jochang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-int		ft_placevalue(int64_t n)
+char	*pt_itoh(uint64_t n, int caps)
 {
-	int count;
+	int		i;
+	char	*s;
+	char	*hex;
 
-	count = n ? 0 : 1;
+	NULL_CHECK(!(s = (char*)ft_strnew(8)));
+	hex = (caps ? "0123456789ABCDEF" : "0123456789abcdef");
+	i = (n == 0 ? 1 : 0);
+	if (n == 0)
+		s[0] = '0';
 	while (n)
 	{
-		n /= 10;
-		count++;
+		s[i] = hex[n & 15];
+		n >>= 4;
+		i++;
 	}
-	return (count);
+	s[i] = '\0';
+	ft_strrev(s);
+	return (s);
 }

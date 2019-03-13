@@ -97,7 +97,34 @@ STR = str/ft_strcat.c \
 	  str/ft_tolower.c \
 	  str/ft_toupper.c \
 
-SRC = $(CHK) $(CNV) $(BIT) $(GET) $(LST) $(MEM) $(PUT) $(STR)
+PRINTF = ft_printf/src/dispatch.c \
+	ft_printf/src/ft_printf.c \
+	ft_printf/src/get_opts.c \
+	ft_printf/src/pt_itoa_abs.c \
+	ft_printf/src/pt_itoh.c \
+	ft_printf/src/pt_itoo.c \
+	ft_printf/src/pt_putwchar.c \
+	ft_printf/src/pt_putwstr.c \
+	ft_printf/src/pt_uitoa.c \
+	ft_printf/src/pt_upval.c \
+	ft_printf/src/pt_wcslen.c \
+	ft_printf/type/d_s.c \
+	ft_printf/type/d_us.c \
+	ft_printf/type/d_p.c \
+	ft_printf/type/d_d.c \
+	ft_printf/type/d_ud.c \
+	ft_printf/type/d_o.c \
+	ft_printf/type/d_uo.c \
+	ft_printf/type/d_u.c \
+	ft_printf/type/d_uu.c \
+	ft_printf/type/d_x.c \
+	ft_printf/type/d_ux.c \
+	ft_printf/type/d_c.c \
+	ft_printf/type/d_uc.c \
+	ft_printf/type/d_percent.c \
+	ft_printf/type/d_b.c \
+
+SRC = $(CHK) $(CNV) $(BIT) $(GET) $(LST) $(MEM) $(PUT) $(STR) $(PRINTF)
 INC = inc
 OBJ = *.o
 

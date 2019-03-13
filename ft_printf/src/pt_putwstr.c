@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_placevalue.c                                    :+:      :+:    :+:   */
+/*   pt_putwstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jochang <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/23 23:20:03 by jochang           #+#    #+#             */
-/*   Updated: 2018/04/26 01:13:05 by jochang          ###   ########.fr       */
+/*   Created: 2018/08/21 21:50:35 by jochang           #+#    #+#             */
+/*   Updated: 2018/08/21 22:11:50 by jochang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-int		ft_placevalue(int64_t n)
+void	pt_putwstr(wchar_t *s)
 {
-	int count;
+	int		i;
 
-	count = n ? 0 : 1;
-	while (n)
+	i = 0;
+	while (s[i])
 	{
-		n /= 10;
-		count++;
+		write(1, &s[i], 1);
+		i++;
 	}
-	return (count);
 }

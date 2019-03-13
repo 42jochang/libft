@@ -1,26 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_placevalue.c                                    :+:      :+:    :+:   */
+/*   pt_itoo.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jochang <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/23 23:20:03 by jochang           #+#    #+#             */
-/*   Updated: 2018/04/26 01:13:05 by jochang          ###   ########.fr       */
+/*   Created: 2018/08/22 14:27:35 by jochang           #+#    #+#             */
+/*   Updated: 2018/08/22 14:39:27 by jochang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-int		ft_placevalue(int64_t n)
+char	*pt_itoo(uint64_t n)
 {
-	int count;
+	int		i;
+	char	*s;
+	char	*oct;
 
-	count = n ? 0 : 1;
+	NULL_CHECK(!(s = (char*)ft_strnew(12)));
+	oct = "01234567";
+	i = (n == 0 ? 1 : 0);
+	if (n == 0)
+		s[0] = '0';
 	while (n)
 	{
-		n /= 10;
-		count++;
+		s[i] = oct[n & 7];
+		n >>= 3;
+		i++;
 	}
-	return (count);
+	s[i] = '\0';
+	ft_strrev(s);
+	return (s);
 }

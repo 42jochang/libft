@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_placevalue.c                                    :+:      :+:    :+:   */
+/*   pt_wcslen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jochang <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/23 23:20:03 by jochang           #+#    #+#             */
-/*   Updated: 2018/04/26 01:13:05 by jochang          ###   ########.fr       */
+/*   Created: 2018/08/12 20:37:39 by jochang           #+#    #+#             */
+/*   Updated: 2018/08/21 21:50:14 by jochang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-int		ft_placevalue(int64_t n)
+size_t		pt_wcslen(wchar_t *s)
 {
-	int count;
+	size_t	i;
 
-	count = n ? 0 : 1;
-	while (n)
-	{
-		n /= 10;
-		count++;
-	}
-	return (count);
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
 }
