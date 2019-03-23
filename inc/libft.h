@@ -17,6 +17,8 @@
 # include <unistd.h>
 # include <string.h>
 # include <stdint.h>
+# include <sys/stat.h>
+# include <sys/ioctl.h>
 
 # include "get_next_line.h"
 # include "ft_printf.h"
@@ -53,6 +55,7 @@ int					ft_isalnum(int c);
 int					ft_isalpha(int c);
 int					ft_isascii(int c);
 int					ft_isdigit(int c);
+int					ft_isdir(const char *path);
 int					ft_isprint(int c);
 int					ft_isspace(char c);
 int					ft_placevalue(int64_t n);
@@ -73,6 +76,7 @@ char				*ft_itoa(int64_t n);
 int					ft_getnstdin(int n, char **string);
 int					ft_getopt(int argc, char **argv, char *optstring);
 char				*ft_getstdin(void);
+int					ft_getwincols(void);
 
 /*
 ** LST

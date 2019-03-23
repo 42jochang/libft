@@ -16,6 +16,7 @@ CHK = chk/ft_isalnum.c \
 	  chk/ft_isalpha.c \
 	  chk/ft_isascii.c \
 	  chk/ft_isdigit.c \
+	  chk/ft_isdir.c \
 	  chk/ft_isprint.c \
 	  chk/ft_isspace.c \
 	  chk/ft_placevalue.c \
@@ -33,6 +34,7 @@ BIT = bit/ft_swapendian.c \
 GET = get/ft_getopt.c \
 	  get/ft_getstdin.c \
 	  get/ft_getnstdin.c \
+	  get/ft_getwincols.c \
 	  get/get_next_line.c \
 
 LST = lst/ft_lstadd.c \
