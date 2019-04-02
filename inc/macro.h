@@ -6,7 +6,7 @@
 /*   By: jochang <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/17 17:11:16 by jochang           #+#    #+#             */
-/*   Updated: 2018/07/11 21:06:09 by jochang          ###   ########.fr       */
+/*   Updated: 2019/04/01 21:56:47 by jochang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 # define ZERO_CHECK(x) if (x) return (0)
 # define NULL_CHECK(x) if (x) return (NULL)
 # define BREAK_CHECK(x) if (x) break
+# define RETURN_CHECK(x) if (x) return
 /*
 ** Status Checks
 */
