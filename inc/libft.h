@@ -116,6 +116,7 @@ void				ft_putendl_fd(char const *s, int fd);
 void				ft_putendl(char const *s);
 void				ft_putnbr_fd(int n, int fd);
 void				ft_putnbr(int n);
+void				ft_putnstr(char *str, int n);
 void				ft_putstr_fd(char const *s, int fd);
 void				ft_putstr(char const *s);
 
@@ -125,6 +126,7 @@ void				ft_putstr(char const *s);
 
 char				*ft_strcat(char *s1, const char *s2);
 char				*ft_strccpy(char *dst, const char *src, char c);
+char				*ft_strcdup(const char *src, char c);
 char				*ft_strchr(const char *s, int c);
 void				ft_strclr(char *s);
 int					ft_strcmp(const char *s1, const char *s2);

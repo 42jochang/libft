@@ -61,12 +61,14 @@ PUT = put/ft_putchar.c \
 	  put/ft_putendl_fd.c \
 	  put/ft_putnbr.c \
 	  put/ft_putnbr_fd.c \
+	  put/ft_putnstr.c \
 	  put/ft_putstr.c \
 	  put/ft_putstr_fd.c \
 	  put/ft_printmemory.c \
 
 STR = str/ft_strcat.c \
 	  str/ft_strccpy.c \
+	  str/ft_strcdup.c \
 	  str/ft_strcpy.c \
 	  str/ft_strchr.c \
 	  str/ft_strclr.c \
