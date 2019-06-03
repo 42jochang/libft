@@ -39,6 +39,11 @@ int					g_optind;
 int					g_optopt;
 
 /*
+** ARR
+*/
+void				ft_arrfree(char **arr);
+
+/*
 ** BIT
 */
 

@@ -12,6 +12,8 @@
 
 NAME = libft.a
 
+ARR = ft_arrfree \
+
 CHK = ft_isalnum \
 	  ft_isalpha \
 	  ft_isascii \
@@ -130,12 +132,12 @@ PRINTF = dispatch \
 
 INC = -I inc
 
-VPATH=chk:cnv:bit:get:lst:mem:put:str:ft_printf/src:ft_printf/type
+VPATH=arr:chk:cnv:bit:get:lst:mem:put:str:ft_printf/src:ft_printf/type
 SRC_DIR = .
 OBJ_DIR = obj
 
-# SRC = $(CHK) $(CNV) $(BIT) $(G#ET) $(LST) $(MEM) $(PUT) $(STR) $(PRINTF)
-OBJ  = $(addsuffix .o, $(addprefix $(OBJ_DIR)/, $(CHK)))
+OBJ  = $(addsuffix .o, $(addprefix $(OBJ_DIR)/, $(ARR)))
+OBJ += $(addsuffix .o, $(addprefix $(OBJ_DIR)/, $(CHK)))
 OBJ += $(addsuffix .o, $(addprefix $(OBJ_DIR)/, $(CNV)))
 OBJ += $(addsuffix .o, $(addprefix $(OBJ_DIR)/, $(BIT)))
 OBJ += $(addsuffix .o, $(addprefix $(OBJ_DIR)/, $(GET)))
@@ -147,31 +149,32 @@ OBJ += $(addsuffix .o, $(addprefix $(OBJ_DIR)/, $(PRINTF)))
 
 DEP = $(OBJ:%.o=%.d)
 
-CC = gcc
+CC = clang-6.0
 CFLAGS = -Wall -Wextra -Werror $(INC)
 MAKEOPTS = -j4
 
 all: $(OBJ_DIR) $(NAME)
 
 $(OBJ_DIR):
-	@echo "\033[32mmaking objects...\033[0m"
+	@printf "\033[32mCompiling Objects...\033[0m\n"
 	@mkdir -p $(OBJ_DIR)
 
 -include $(DEP)
 
 $(OBJ_DIR)/%.o: %.c
+	@printf "\033[32mCompiling: \033[0m%s\n" $<
 	@$(CC) $(CFLAGS) -MMD -c $< -o $@
 
 $(NAME): $(OBJ)
-	@echo "\033[32mmaking libft...\033[0m"
+	@printf "\033[32mmaking libft...\033[0m\n"
 	@ar -rcs $@ $^
 
 clean:
-	@echo "\033[33mcleaning libft repository...\033[0m"
+	@printf "\033[33mcleaning libft repository...\033[0m\n"
 	@rm -f $(OBJ) $(DEP)
 
 fclean: clean
-	@echo "\033[33mremoving libft library file...\033[0m"
+	@printf "\033[33mremoving libft library file...\033[0m\n"
 	@rm -rf $(OBJ_DIR)
 	@rm -f $(NAME)
 
