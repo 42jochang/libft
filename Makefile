@@ -13,6 +13,7 @@
 NAME = libft.a
 
 ARR = ft_arrfree \
+	  ft_arrprint \
 
 CHK = ft_isalnum \
 	  ft_isalpha \

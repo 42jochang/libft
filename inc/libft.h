@@ -42,6 +42,7 @@ int					g_optopt;
 ** ARR
 */
 void				ft_arrfree(char **arr);
+void				ft_arrprint(char **arr);
 
 /*
 ** BIT
