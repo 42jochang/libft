@@ -161,6 +161,7 @@ char				*ft_strrev(char *str);
 char				**ft_strsplit(char const *s, char c);
 char				*ft_strstr(const char *str, const char *to_find);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
+char				*ft_strtok(char *str, const char *delim);
 char				*ft_strtrim(char const *s);
 char				*ft_strupper(const char *src);
 int					ft_toupper(int c);

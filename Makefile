@@ -99,6 +99,7 @@ STR = ft_strcat \
 	  ft_strsplit \
 	  ft_strstr \
 	  ft_strsub \
+	  ft_strtok \
 	  ft_strtrim \
 	  ft_strupper \
 	  ft_tolower \
