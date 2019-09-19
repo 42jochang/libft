@@ -151,14 +151,14 @@ OBJ += $(addsuffix .o, $(addprefix $(OBJ_DIR)/, $(PRINTF)))
 
 DEP = $(OBJ:%.o=%.d)
 
-CC = clang-6.0
+CC = gcc
 CFLAGS = -Wall -Wextra -Werror $(INC)
 MAKEOPTS = -j4
 
 all: $(OBJ_DIR) $(NAME)
 
 $(OBJ_DIR):
-	@printf "\033[32mCompiling Objects...\033[0m\n"
+	@printf "\033[32mCompiling: Objects\033[0m\n"
 	@mkdir -p $(OBJ_DIR)
 
 -include $(DEP)
@@ -168,15 +168,15 @@ $(OBJ_DIR)/%.o: %.c
 	@$(CC) $(CFLAGS) -MMD -c $< -o $@
 
 $(NAME): $(OBJ)
-	@printf "\033[32mmaking libft...\033[0m\n"
+	@printf "\033[32mLinking: libft\033[0m\n"
 	@ar -rcs $@ $^
 
 clean:
-	@printf "\033[33mcleaning libft repository...\033[0m\n"
+	@printf "\033[33mCleaning: libft repository\033[0m\n"
 	@rm -f $(OBJ) $(DEP)
 
 fclean: clean
-	@printf "\033[33mremoving libft library file...\033[0m\n"
+	@printf "\033[33mDeleting: libft library file\033[0m\n"
 	@rm -rf $(OBJ_DIR)
 	@rm -f $(NAME)
 
