@@ -6,7 +6,7 @@
 /*   By: jochang <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/15 12:14:07 by jochang           #+#    #+#             */
-/*   Updated: 2018/08/22 18:23:48 by jochang          ###   ########.fr       */
+/*   Updated: 2019/09/21 22:24:24 by jochang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,12 +73,10 @@ int			d_p(t_opts opts, va_list ap)
 {
 	uint64_t	p;
 	char		*s;
-	int			len;
 
 	error_check(opts);
 	p = va_arg(ap, uint64_t);
 	s = convert(p);
-	len = 14;
 	if (opts.width > 14)
 		s = padding(s, opts);
 	ft_putstr(s);
