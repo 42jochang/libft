@@ -6,7 +6,7 @@
 /*   By: jochang <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/13 11:02:45 by jochang           #+#    #+#             */
-/*   Updated: 2018/08/22 18:26:30 by jochang          ###   ########.fr       */
+/*   Updated: 2019/09/21 22:27:09 by jochang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ static char		*padding(char *s, t_opts opts)
 	int		l;
 
 	len = ft_strlen(s) + ((opts.flags.plus || opts.flags.space) ? 1 : 0);
-	len = ((uint32_t)len > opts.width ? len : opts.width);
+	len = ((uint32_t)len > opts.width ? (uint32_t)len : opts.width);
 	NULL_CHECK(!(str = (char*)ft_strnew(len)));
 	ft_memset(str, ((opts.flags.zero && !opts.flags.minus) ?
 				'0' : ' '), len);

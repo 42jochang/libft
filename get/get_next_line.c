@@ -6,7 +6,7 @@
 /*   By: jochang <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/27 17:12:30 by jochang           #+#    #+#             */
-/*   Updated: 2018/08/15 13:58:18 by jochang          ###   ########.fr       */
+/*   Updated: 2019/09/22 01:30:05 by jochang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static t_list	*assign_save(t_list **save, int fd)
 			return (tmp);
 		tmp = tmp->next;
 	}
-	tmp = ft_lstnew("\0", 0);
+	tmp = ft_lstnew("", fd);
 	ft_lstadd(save, tmp);
 	return (*save);
 }
