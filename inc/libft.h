@@ -48,8 +48,9 @@ void				ft_arrprint(char **arr);
 ** BIT
 */
 
-uint32_t			ft_swapendian(uint32_t i);
-uint32_t			*ft_swapnendian(uint32_t *arr, int32_t n);
+uint16_t			ft_swapendian16(uint16_t i);
+uint32_t			ft_swapendian32(uint32_t i);
+uint32_t			*ft_swapnendian32(uint32_t *arr, int32_t n);
 uint64_t			ft_swapendian64(uint64_t i);
 uint64_t			*ft_swapnendian64(uint64_t *arr, int32_t n);
 

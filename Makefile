@@ -29,8 +29,9 @@ CHK = ft_isalnum \
 CNV = ft_atoi \
 	  ft_itoa \
 
-BIT = ft_swapendian \
-	  ft_swapnendian \
+BIT = ft_swapendian16 \
+	  ft_swapendian32 \
+	  ft_swapnendian32 \
 	  ft_swapendian64 \
 	  ft_swapnendian64 \
 
